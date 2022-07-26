@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Gulzar&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gulzar', serif;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-image: linear-gradient(to right, #ff512f, #f09819);
+}
+
+.container {
+    max-width: 70rem;
+    width: 100%;
+    font-size: 1.6rem;
+    background: #ffff;
+    padding: 2.5rem 3rem;
+    border-radius: 0.5rem;
+}
+
+.container .title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .title::before {
+    content: '';
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    height: 0.3rem;
+    width: 3rem;
+    background-image: linear-gradient(to right, #ff512f, #f09819);
+}
+
+.container form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form .user-details .input-box {
+    margin-bottom: 1.5rem;
+    width: calc(100% / 2 - 2rem);
+}
+
+.user-details .input-box .details {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.user-details .input-box input {
+    height: 4.5rem;
+    width: 100%;
+    outline: none;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #ccc;
+    padding-left: 1.5rem;
+    font-size: 1.6rem;
+    border-bottom-width: 0.2rem;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+    border-color: #f09819;
+}
+
+form .gender-details .gender-title {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+form .gender-details .catagory {
+    display: flex;
+    width: 80%;
+    margin: 1.4rem 0;
+    justify-content: space-between;
+}
+
+.gender-details .catagory label {
+    display: flex;
+    align-items: center;
+}
+
+.gender-details .catagory .dot {
+    height: 1.8rem;
+    width: 1.8rem;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 1rem;
+    border: 0.5rem solid transparent;
+    transition: all 0.1s ease;
+}
+
+#dot-1:checked~.catagory label .one,
+#dot-2:checked~.catagory label .two,
+#dot-3:checked~.catagory label .three {
+    border-color: #d9d9d9;
+    background-image: linear-gradient(to right, #ff512f, #f09819);
+}
+
+form input[type="radio"] {
+    display: none;
+}
+
+form .bottom {
+    height: 4.5rem;
+    margin: 4.5rem 0;
+}
+
+form .button input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #ffff;
+    border: none;
+    font-size: 1.8rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    letter-spacing: 0.1rem;
+    background-image: linear-gradient(to right, #ff512f, #f09819);
+}
+
+form .button input:hover {
+    background-image: linear-gradient(to left, #ff512f, #f09819);
+}
+
+@media (max-width: 61.3rem) {
+    html {
+        font-size: 56.25%;
+    }
+}
+
+@media (max-width: 56.5rem) {
+    html {
+        font-size: 54%;
+    }
+}
+
+@media (max-width: 52.9rem) {
+    html {
+        font-size: 52%;
+    }
+}
+
+@media (max-width: 51.1rem) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 48.6rem) {
+    html {
+        font-size: 48%;
+    }
+}
+
+@media (max-width: 47.2rem) {
+    html {
+        font-size: 44%;
+    }
+}
+
+@media (max-width: 43.2rem) {
+    html {
+        font-size: 40%;
+    }
+}
+
+@media (max-width: 39.3rem) {
+    html {
+        font-size: 44%;
+    }
+    .container form .user-details {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+
+/* js error validation */
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
