@@ -64,3 +64,33 @@ const phoneDetails = () => {
         PhoneNumber.classList.add('success')
     }
 }
+const password = () => {
+    let passInput = document.getElementById('passInput').value;
+    if (passInput.trim().length < 15) {
+        if (passInput.trim().length < 8) {
+            document.getElementById('pout').innerText = "Min length of password is 8";
+            document.getElementById('ppout').style.display = "block";
+            document.getElementById('ppout').style.backgroundColor = "red";
+        } else if (passInput.trim().length < 11) {
+            document.getElementById('pout').innerText = "";
+            document.getElementById('ppout').style.backgroundColor = "orange";
+        }
+    } else {
+        document.getElementById('ppout').style.backgroundColor = "green";
+    }
+}
+const cpassword = () => {
+    let cpassInput = document.getElementById('cpassInput').value;
+    let passInput = document.getElementById('passInput').value;
+    let ConfirmPassword = document.getElementById('ConfirmPassword')
+    if (passInput !== cpassInput) {
+        document.getElementById('cpout').innerText = "Password Does Not Match";
+        ConfirmPassword.classList.remove('success')
+        ConfirmPassword.classList.add('error')
+
+    } else {
+        document.getElementById('cpout').innerText = "";
+        ConfirmPassword.classList.remove('error')
+        ConfirmPassword.classList.add('success')
+    }
+}

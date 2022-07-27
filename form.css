@@ -216,3 +216,12 @@ form .button input:hover {
 .success {
     color: green;
 }
+
+
+/* Password verification */
+
+#ppout {
+    height: 1rem;
+    width: 100%;
+    display: none;
+}

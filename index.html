@@ -36,11 +36,14 @@
                 </div>
                 <div class="input-box">
                     <span class="details">Password</span>
-                    <input class="input-area" type="text" placeholder="Enter Your password" required>
+                    <input class="input-area" id="passInput" type="password" oninput="password()" placeholder="Enter Your password" required>
+                    <span id="pout"></span>
+                    <div id="ppout"></div>
                 </div>
-                <div class="input-box">
+                <div class="input-box" id="ConfirmPassword">
                     <span class="details">Confirm Password</span>
-                    <input class="input-area" type="text" placeholder="Confirm your password" required>
+                    <input class="input-area" id="cpassInput" oninput="cpassword()" type="password" placeholder="Confirm your password" required>
+                    <span id="cpout"></span>
                 </div>
             </div>
             <div class="gender-details">
